@@ -9,7 +9,7 @@ interface CountryCardProps {
 }
 
  function CountryCard({ country }:CountryCardProps) {
-    console.log("Card Country:", country.cca3, country);
+    // console.log("Card Country:", country.cca3, country);
 
   return (
     <Link to={`/country/${country.cca3}`} className="card">

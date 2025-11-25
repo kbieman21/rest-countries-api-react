@@ -12,8 +12,8 @@ function App() {
     <>
     <NavBar />
       <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/country/:code' element={<CountryDetail/>}/> 
+        <Route path='/' element={<HomePage />} />
+        <Route path='/country/:code' element={<CountryDetail/>}/> 
       
       
     </Routes>

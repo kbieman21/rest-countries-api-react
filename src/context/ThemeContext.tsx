@@ -1,11 +1,12 @@
 import { createContext, useEffect, useState } from "react";
+import type { Theme } from '../api/types';
 
 
-type Theme = "light" | "dark";
 
 interface ThemeContextProps{
     children: React.ReactNode;
 }
+
 
 export const ThemeContext = createContext<{
     theme: Theme,

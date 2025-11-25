@@ -12,3 +12,5 @@ export type Country = {
   population: number;
   cca3: string; // important for border codes
 };
+
+export type Theme = "light" | "dark";
