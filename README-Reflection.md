@@ -14,3 +14,4 @@ This project demonstrates:
 # Reflection 
 
 First I did some research on the API, and I took notes what dependencies I need and what software I will be using. Then, I started developing this project by laying all my folder structure and comeup with my pages name, components and context. The most challenging part of this project was memorizing syntaxes. I have refered to my notes and some online sources to get my syntax going. I have tried my best to modularize this project. I kept my api, type, component, context, pages all separated. I have implemented the localStorge storing the theme which was greate experience. 
+

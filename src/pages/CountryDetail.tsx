@@ -1,40 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
 import { getCountriesByCodes, getCountryByCode } from "../api/countries";
 
 export default function CountryDetail() {
   const { code } = useParams();
   const [country, setCountry] = useState<any>(null);
   const [borders, setBorders] = useState<any[]>([]);
-
-//   useEffect(() => {
-//     if(!code) return;
-//     async function fetchCountry() {
-//       try {
-//         const res = await getCountriesByCodes(code);
-//         console.log("THIS IS THE RES", res);
-
-//         const data = Array.isArray(res.data) ? res.data[0] : res.data;
-//         // console.log("THIS IS THE DATA", data);
-//         setCountry(data);
-
-//         if (data.borders && data.borders?.length > 0) {
-//           console.log(data.borders.length);
-
-          
-//           const borderRes = await getCountriesByCodes(data.borders)
-//           setBorders(borderRes.data);
-//         } else {
-//           setBorders([]);
-//         }
-//       } catch (err) {
-//         console.error("Failed to fetch country:", err);
-//       }
-//     }
-
-//     fetchCountry();
-//   }, [code]);
 
 
 
