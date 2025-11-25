@@ -9,13 +9,13 @@ interface ThemeContextProps{
 
 
 export const ThemeContext = createContext<{
-    theme: Theme,
+    theme: Theme;
     toggleTheme: () => void
     }>({theme: 'light', toggleTheme: ()=> {},});
 
 export function ThemeProvider({ children }:ThemeContextProps) {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "light"
+  const [theme, setTheme] = useState<Theme>(
+    (localStorage.getItem("theme") as Theme) || "light"
   );
 
   useEffect(() => {

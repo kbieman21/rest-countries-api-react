@@ -1,4 +1,5 @@
 import axios from "axios"
+import type { Country } from "./types"
 
 const BASE_URL = "https://restcountries.com"  //v3.1/all?fields=name,flags,population,region,capital
 
@@ -14,6 +15,14 @@ export function getAllCountries(){
 //https://restcountries.com/v3.1/alpha/{code}
 //`https://restcountries.com/v3.1/alpha?codes=${codes}`
  export function getCountryByCode(code:string){
-    return axios.get(`https://restcountries.com/v3.1/alpha/${code}`)
+    return axios.get<Country[]>(`${BASE_URL}/v3.1/alpha/${code}`)
+
                     //https://restcountries.com/v3.1/alpha/${code}
  }
+
+ // Get multiple countries using border codes
+export function getCountriesByCodes(codes: string[]) {
+  return axios.get<Country[]>(
+    `${BASE_URL}/v3.1/alpha?codes=${codes.join(",")}`
+  );
+}

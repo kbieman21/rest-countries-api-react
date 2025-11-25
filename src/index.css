@@ -80,6 +80,8 @@ button:focus-visible {
   grid-template-columns: repeat(1, 1fr); /* Mobile default */
   gap: 2rem; /* space between cards */
   padding: 2rem;
+  text-align: left;
+  font-size: 14;
 }
 
 /* Tablet */

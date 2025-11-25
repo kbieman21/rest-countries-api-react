@@ -4,9 +4,10 @@ import CountryCard from "../components/CountryCard";
 import FilterRegion from "../components/FilterRegion";
 import { getAllCountries } from "../api/countries";
 import SearchBar from "../components/SearchBar";
+import type { Country } from "../api/types";
 
  function HomePage() {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState<Country[]>([]);
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
 

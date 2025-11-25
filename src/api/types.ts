@@ -1,5 +1,6 @@
+
+
 export type Country = {
-  [x: string]: any;
   name: {
     common: string;
     official: string;
@@ -7,10 +8,19 @@ export type Country = {
   flags: {
     png: string;
     svg: string;
+    alt?: string;
   };
   region: string;
+  subregion?: string;
   population: number;
-  cca3: string; // important for border codes
+  capital?: string[];  // <-- FIX
+  cca3: string;
+  borders?: string[];  // <-- FIX
+  tld?: string[];
+  currencies?: Record<string, { name: string; symbol: string }>;
+  languages?: Record<string, string>;
 };
+
+
 
 export type Theme = "light" | "dark";
